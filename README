@@ -1,0 +1,6 @@
+POE::Component::Server::Chargen
+===============================
+
+A very simple component to implement RFC 864.
+
+>;o)
