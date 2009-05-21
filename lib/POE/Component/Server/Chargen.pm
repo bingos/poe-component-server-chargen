@@ -20,7 +20,7 @@ use vars qw($VERSION);
 use constant DATAGRAM_MAXLEN => 1024;
 use constant DEFAULT_PORT => 19;
 
-$VERSION = '1.12';
+$VERSION = '1.14';
 
 sub spawn {
   my $package = shift;
@@ -129,13 +129,13 @@ POE::Component::Server::Chargen - A POE component that implements an RFC 864 Cha
 =head1 DESCRIPTION
 
 POE::Component::Server::Chargen implements a RFC 864 L<http://www.faqs.org/rfcs/rfc864.html> TCP/UDP chargen server, using
-L<POE|POE>. It is a class inherited from L<POE::Component::Server::Echo|POE::Component::Server::Echo>.
+L<POE>. It is a class inherited from L<POE::Component::Server::Echo|POE::Component::Server::Echo>.
 
 =head1 METHODS
 
 =over
 
-=item spawn
+=item C<spawn>
 
 Takes a number of optional values: 
 
@@ -161,7 +161,7 @@ The character generation code by Rocco Caputo.
 
 =head1 LICENSE
 
-Copyright (C) Chris Williams and Rocco Caputo.
+Copyright E<copy> Chris Williams and Rocco Caputo.
 
 This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
