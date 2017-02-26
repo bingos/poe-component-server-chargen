@@ -9,18 +9,17 @@
 
 package POE::Component::Server::Chargen;
 
+#ABSTRACT: A POE component that implements an RFC 864 Chargen server.
+
 use strict;
 use warnings;
 use Carp;
 use POE;
 use Socket;
 use base qw(POE::Component::Server::Echo);
-use vars qw($VERSION);
 
 use constant DATAGRAM_MAXLEN => 1024;
 use constant DEFAULT_PORT => 19;
-
-$VERSION = '1.14';
 
 sub spawn {
   my $package = shift;
@@ -108,12 +107,9 @@ sub _generate_line {
   return $chargen_line;
 }
 
-1;
-__END__
+qq[A Gen of chars];
 
-=head1 NAME
-
-POE::Component::Server::Chargen - A POE component that implements an RFC 864 Chargen server.
+=pod
 
 =head1 SYNOPSIS
 
@@ -137,7 +133,7 @@ L<POE>. It is a class inherited from L<POE::Component::Server::Echo|POE::Compone
 
 =item C<spawn>
 
-Takes a number of optional values: 
+Takes a number of optional values:
 
   "Alias", the kernel alias that this component is to be blessed with; 
   "BindAddress", the address on the local host to bind to, defaults to 
@@ -152,18 +148,6 @@ Takes a number of optional values:
 =head1 BUGS
 
 Report any bugs through L<http://rt.cpan.org/>.
-
-=head1 AUTHOR
-
-Chris 'BinGOs' Williams, <chris@bingosnet.co.uk>
-
-The character generation code by Rocco Caputo.
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams and Rocco Caputo.
-
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
